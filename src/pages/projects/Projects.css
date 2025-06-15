@@ -1,0 +1,150 @@
+.projects-main {
+  width: 100%;
+  text-align: center;
+}
+
+.basic-projects {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.projects-heading-div {
+  display: flex;
+}
+
+.projects-heading-div > * {
+  flex: 1;
+}
+
+.projects-heading-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-heading-text-div {
+  text-align: center;
+}
+
+.projects-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.projects-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.projects-heading-sub-text {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.projects-header-detail-text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Google Sans Medium";
+}
+.publications-heading-text-div {
+  text-align: center;
+  font-family: "Google Sans Regular";
+  margin-top: 70px;
+}
+
+.publications-heading-text {
+  font-size: 56px;
+  font-weight: 600;
+}
+.repo-cards-div-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 60px;
+}
+
+@media (max-width: 1380px) {
+  .projects-heading-text {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+  .projects-heading-sub-text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-heading-text,
+  .publications-heading-text {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .projects-heading-sub-text {
+    font-size: 20px;
+  }
+
+  .projects-heading-div {
+    flex-direction: column;
+  }
+
+  .projects-header-detail-text {
+    font-size: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .repo-cards-div-main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+}
+
+/* Styles for the container div of the button */
+.projects-button-div {
+  margin-top: 30px; /* Adds space between the description and the button */
+  display: flex; /* Uses Flexbox to align content */
+  justify-content: center; /* Centers the button horizontally */
+  /* If you prefer the button aligned to the left with the text, change to:
+     justify-content: flex-start;
+  */
+}
+
+/* Styles for the 'View Paper' button itself */
+.portfolio-button {
+  padding: 14px 35px; /* Increases the button's padding for a larger size */
+  font-size: 1.15em; /* Makes the button text slightly larger */
+  border-radius: 8px; /* Adds nice rounded corners */
+  text-decoration: none; /* Ensures no underline on the link */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Indicates it's clickable */
+  
+  /* These colors are likely handled by your Button component based on 'theme' prop,
+     but if not, you might need to manually apply:
+     background-color: var(--accent-color);
+     color: var(--text-color);
+     border: 2px solid var(--accent-color);
+  */
+}
+
+.portfolio-button:hover {
+  transform: translateY(-3px); /* Lifts the button slightly on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow on hover */
+  opacity: 0.9; /* Slight transparency on hover */
+}

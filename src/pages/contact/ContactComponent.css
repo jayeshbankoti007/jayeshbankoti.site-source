@@ -1,0 +1,309 @@
+/* General container for the entire contact section */
+.contact-main {
+  width: 100%;
+}
+
+.basic-contact {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 50px 0; /* Added vertical padding for overall section */
+}
+
+/* --- Profile Image and Contact Info Section --- */
+.contact-heading-div {
+  display: flex;
+  flex-direction: row; /* Keep side-by-side for desktop */
+  justify-content: center; /* Center the whole block horizontally */
+  align-items: center; /* Vertically align items */
+  gap: 50px; /* Space between the image and the text */
+  max-width: 1200px; /* Limit the max width of this section on large screens */
+  margin: 0 auto; /* Center the section on the page */
+  padding: 20px; /* Internal padding */
+}
+
+.contact-heading-img-div {
+  /* --- IMPORTANT CHANGES FOR IMAGE SIZING --- */
+  width: 400px; /* Fixed width for the image container */
+  height: 400px; /* Fixed height for the image container (makes it square/circular) */
+  flex-shrink: 0; /* Prevents this container from shrinking smaller than its defined size */
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Clips anything outside the circle */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds a nice shadow */
+  /* Remove display: flex, align-items, justify-content from here as the img fills 100% */
+}
+
+.contact-heading-img-div img {
+  /* --- IMPORTANT CHANGES FOR IMAGE FITTING --- */
+  width: 100%; /* Make the image fill 100% of its new fixed-size container */
+  height: 100%; /* Make the image fill 100% of its new fixed-size container */
+  object-fit: cover; /* Ensures the image covers the area, cropping if necessary, maintaining aspect ratio */
+  display: block; /* Removes any extra space below the image */
+  object-position: -20% 10%;
+}
+
+.contact-heading-text-div {
+  flex-grow: 1; /* Allows the text div to take up the remaining space */
+  max-width: 600px; /* Optional: limit text width for readability */
+  text-align: left; /* Keep text aligned left for better readability */
+}
+
+/* Remove or modify the problematic general flex: 1 rule */
+/* .contact-heading-div > * { flex: 1; } - REMOVED or OVERRIDDEN */
+
+.contact-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  margin-top: 0; /* Adjust margin here to prevent top space */
+  margin-bottom: 10px;
+}
+
+.contact-header-detail-text {
+  font-size: 20px;
+  line-height: 1.5; /* Improved line spacing */
+  margin-top: 0px;
+  margin-left: 0px; /* Align with text-align: left */
+  margin-right: 0px; /* Align with text-align: left */
+  margin-bottom: 20px; /* Space after description */
+  font-family: "Google Sans Medium";
+}
+
+.contact-heading-text-div .social-media {
+    margin-bottom: 20px; /* Space below social media icons */
+    justify-content: flex-start; /* Align social media icons to the left with text */
+}
+
+.resume-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Align button to the left with text */
+  margin-top: 20px;
+}
+
+/* --- Blog Heading Section (Adjusted to be separate) --- */
+.blog-heading-div {
+  display: flex;
+  flex-direction: row; /* Side-by-side for desktop */
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.blog-heading-img-div {
+  /* Default sizing for blog image/icon */
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Use 'contain' for general images/icons, 'cover' for profile-like fills */
+}
+
+.blog-heading-text-div {
+  flex-grow: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.blog-heading-text {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Medium";
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.blog-header-detail-text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  font-family: "Google Sans Medium";
+}
+
+.blogsite-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+/* --- Address & Phone Info Section --- */
+.address-heading-div {
+  display: flex;
+  flex-direction: column; /* Stack image (icon) above text for this section */
+  align-items: center; /* Center horizontally in column layout */
+  text-align: center; /* Center text within this section */
+  margin-top: 80px; /* Space from previous section */
+  padding: 50px 20px; /* Internal padding */
+  max-width: 800px; /* Limit width of this section */
+  margin-left: auto; /* Center this section */
+  margin-right: auto;
+}
+
+.address-image-div {
+  /* This is the container for the AddressImg (SVG icon) */
+  width: 150px; /* Desired width for the address icon */
+  height: 150px; /* Desired height for the address icon */
+  margin-bottom: 25px; /* Space between icon and text */
+  flex-shrink: 0;
+  /* If you want the address icon to also be circular, add: */
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.address-image-div svg {
+  /* This targets the SVG element rendered by AddressImg */
+  width: 100%;
+  height: 100%;
+  display: block; /* Remove extra space below SVG */
+}
+
+.address-heading-text-div {
+  flex-grow: 1;
+  max-width: 500px; /* Limit text width */
+}
+
+.address-heading-text {
+  font-size: 30px;
+  font-family: "Google Sans Regular";
+  margin-bottom: 10px;
+  margin-top: 0; /* Adjust margins */
+}
+
+.address-heading-text + .contact-header-detail-text {
+  margin-bottom: 25px; /* Space after address subtitle before phone heading */
+}
+
+.address-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center button in this section */
+  margin-top: 20px; /* Space above button */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1380px) {
+  .contact-heading-text {
+    font-size: 50px;
+  }
+  .blog-heading-text {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-heading-div,
+  .blog-heading-div {
+    flex-direction: column; /* Stack image and text vertically on medium screens */
+    align-items: center; /* Center horizontally when stacked */
+    gap: 30px; /* Reduce gap when stacked */
+    padding: 20px;
+  }
+
+  .contact-heading-img-div,
+  .blog-heading-img-div {
+    width: 250px; /* Slightly smaller size for images on tablets */
+    height: 250px;
+    margin-left: 0; /* Remove side margins */
+    margin-right: 0;
+  }
+
+  .contact-heading-text-div,
+  .blog-heading-text-div {
+    text-align: center; /* Center text when stacked */
+    padding-left: 0; /* Remove side padding */
+    padding-right: 0;
+  }
+
+  .contact-heading-text-div .social-media,
+  .resume-btn-div,
+  .blogsite-btn-div {
+    justify-content: center; /* Center social media and buttons */
+  }
+
+  /* Address section specific adjustments for tablets */
+  .address-heading-div {
+    padding: 30px 15px;
+  }
+  .address-image-div {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .basic-contact {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 30px 0;
+  }
+
+  .contact-heading-text,
+  .blog-heading-text {
+    font-size: 38px; /* Further reduce heading size */
+  }
+
+  .contact-header-detail-text,
+  .blog-header-detail-text {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .contact-heading-img-div,
+  .blog-heading-img-div {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Address section specific adjustments for smaller mobiles */
+  .address-heading-text {
+    font-size: 24px;
+  }
+  .address-image-div {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading-text,
+  .blog-heading-text {
+    font-size: 30px;
+  }
+  .contact-header-detail-text,
+  .blog-header-detail-text {
+    font-size: 16px;
+  }
+  .contact-heading-img-div,
+  .blog-heading-img-div {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Address section specific adjustments for very small mobiles */
+  .address-heading-text {
+    font-size: 20px;
+  }
+  .address-image-div {
+    width: 80px;
+    height: 80px;
+  }
+}

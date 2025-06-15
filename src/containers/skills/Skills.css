@@ -1,0 +1,125 @@
+/* Default styles for larger screens (and general styling) */
+.skills-main-div {
+  display: flex;
+  overflow: hidden;
+  align-items: center; /* Vertically centers the image and text */
+  gap: 30px; /* Adds space between the image and text sections */
+}
+
+.skills-header {
+  font-size: 60px;
+  line-height: normal;
+  font-family: "Google Sans Regular";
+  text-align: center;
+}
+
+.skills-text {
+  font-size: 20px;
+  /* Allows text to wrap naturally to multiple lines */
+  white-space: normal;
+  /* Removed overflow and text-overflow as per your request, so full text is always visible */
+}
+
+.skills-text-div {
+  font-family: "Google Sans Regular";
+  flex-grow: 1; /* Allows the text div to take up all available remaining space */
+  flex-shrink: 1; /* Allows the text div to shrink if needed */
+}
+
+/* Apply margin-bottom directly to the flex children for consistent spacing */
+.skills-image-div, .skills-text-div {
+    margin-bottom: 30px;
+}
+
+.skills-image-div {
+  flex-shrink: 0; /* Prevents the image div from shrinking below its basis */
+  flex-grow: 0; /* Prevents the image div from growing beyond its basis */
+
+  /* --- ADJUST IMAGE SIZE FOR DEFAULT (Larger) SCREENS HERE --- */
+  /* Adjust this percentage to control the image's width relative to the skills-main-div */
+  flex-basis: 45%; /* Example: 45% of the parent's width */
+  /* Adjust this pixel value to cap the image's absolute maximum width on very large screens */
+  max-width: 500px; /* Example: Image won't be wider than 500px */
+  /* Optional: Sets a minimum width for the image to prevent it from getting too small */
+  min-width: 280px; 
+  /* ------------------------------------------------------------- */
+
+  display: flex; /* Uses flexbox to center the SVG inside */
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-image-div > * {
+  /* This targets your SVG React components directly */
+  width: 100%; /* Makes the SVG fill the width of its parent .skills-image-div */
+  height: auto; /* Maintains the SVG's aspect ratio */
+  margin-top: 0px; /* Ensures no extra top margin from the image itself */
+}
+
+.skills-heading {
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Google Sans Regular";
+  line-height: normal;
+}
+
+/* Media Query for screens up to 1380px wide */
+@media (max-width: 2380px) {
+  .skills-heading {
+    font-size: 40px;
+  }
+  .skills-header {
+    font-size: 50px;
+  }
+  .skills-image-div {
+    /* --- ADJUST IMAGE SIZE FOR SCREENS UP TO 1380PX WIDE HERE --- */
+    flex-basis: 50%; /* <-- You can adjust this percentage (e.g., 60% for larger image) */
+    max-width: 600px; /* <-- You can adjust this pixel value (e.g., 700px for larger max size) */
+    min-width: 250px; /* Keeps image from shrinking too much on these screen sizes */
+    /* ---------------------------------------------------------------- */
+  }
+}
+
+/* Media Query for very small screens (e.g., mobile phones) up to 368px wide */
+@media (max-width: 368px) {
+  .skills-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .skills-header {
+    font-size: 30px;
+  }
+  .greeting-text-p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .skills-main-div {
+    flex-direction: column; /* Stacks image and text vertically on small screens */
+    gap: 0; /* Removes gap when stacked */
+  }
+  .skills-text-div {
+    margin-left: 0px;
+    margin: 20px;
+    white-space: normal; /* Allow text to wrap on small screens */
+    flex-basis: auto; /* Reset flex-basis for column layout */
+  }
+  .skills-text {
+    font-size: 16px;
+    white-space: normal; /* Allow text to wrap on small screens */
+  }
+  .skills-text-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  .skills-image-div {
+    order: 2; /* Changes the display order on small screens (image below text) */
+    flex-basis: auto; /* Reset flex-basis for column layout */
+    width: 80%; /* Allow image to take up most of the width */
+    max-width: none; /* Remove max-width constraint */
+    min-width: unset; /* Remove min-width constraint */
+    margin: 20px auto; /* Center image horizontally */
+  }
+  .skills-image-div > * {
+    margin-top: 0px;
+  }
+}
