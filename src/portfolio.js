@@ -31,6 +31,19 @@ const greeting = {
 
 
 const socialMediaLinks = [
+  
+  {
+    name: "Gmail",
+    link: "mailto:jayeshbankoti@gmail.com",
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836",
+  },
+  {
+    name: "Phone",
+    link: "tel:+918448359710",
+    fontAwesomeIcon: "fa-whatsapp",
+    backgroundColor: "#25D366",
+  },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/jayeshbankoti/",
@@ -38,11 +51,11 @@ const socialMediaLinks = [
     backgroundColor: "#0077B5",
   },
   {
-    name: "Gmail",
-    link: "mailto:jayeshbankoti@gmail.com",
-    fontAwesomeIcon: "fa-google",
-    backgroundColor: "#D14836",
-  },
+    name: "Reddit",
+    link: "https://www.reddit.com/user/constantly_perpetual",
+    fontAwesomeIcon: "fa-reddit-alien",
+    backgroundColor: "#FF4500",
+  } 
 ];
 
 const skills = {
@@ -401,7 +414,7 @@ const publications = {
 // Contact Page
 const contactPageData = {
   contactSection: {
-    title: "Contact Me",
+    title: "Need AI Help? Reach Out",
     profile_image_path: "self_image.png",
     description:
       "You can message me, I will revert back within 24 hours. I can assist you with ML, GEN AI, DL and Infrastructure Development.",

@@ -44,13 +44,14 @@ class Contact extends Component {
                   {ContactData["description"]}
                 </p>
                 <SocialMedia theme={theme} />
+
                 <div className="resume-btn-div">
                   <Button
-                    text="Download My Resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                    theme={theme}
-                  />
+                      text="⭐ Steal My Resume"
+                      href={greeting.resumeLink}
+                      theme={theme}
+                      className="portfolio-repo-btn"
+                    />
                 </div>
               </div>
             </div>
@@ -111,3 +112,5 @@ class Contact extends Component {
 }
 
 export default Contact;
+
+
