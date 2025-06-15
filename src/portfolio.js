@@ -404,7 +404,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "self_image.png",
     description:
-      "You can message me, I will reply within 24 hours. I can assist you with ML, GEN AI, DL and Infrastructure Development.",
+      "You can message me, I will revert back within 24 hours. I can assist you with ML, GEN AI, DL and Infrastructure Development.",
   },
   blogSection: {
     title: "Blogs",
