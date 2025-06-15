@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bf82c4d16bb463743f9b1e7325805e0",
+    "revision": "e9bb4ec62602dc90d826113958818c52",
     "url": "/jayeshbankoti.site-source/index.html"
   },
   {
-    "revision": "1dbe507930be5e3af81e",
+    "revision": "1d1ca32f91a8ca34ea87",
     "url": "/jayeshbankoti.site-source/static/css/main.b06e7907.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jayeshbankoti.site-source/static/js/2.3f63aaf1.chunk.js"
   },
   {
-    "revision": "1dbe507930be5e3af81e",
-    "url": "/jayeshbankoti.site-source/static/js/main.4d859642.chunk.js"
+    "revision": "1d1ca32f91a8ca34ea87",
+    "url": "/jayeshbankoti.site-source/static/js/main.4f3b6ae0.chunk.js"
   },
   {
     "revision": "a9220a27c61e6da4abcd",
